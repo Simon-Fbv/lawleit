@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 作用：根据元素在HTML中的结构关系查找元素
+    优势：减少对HTML中·类的依赖，有利于保持代码的整洁 
+场景：常用于查找某父级选择器中的子元素-->
+    <style>
+        li:first-child {
+            background-color: green;
+        }
+
+        li:last-child {
+            background-color: antiquewhite;
+        }
+
+        li:nth-last-child(5) {
+            background-color: blueviolet;
+        }
+
+        li:nth-child(5) {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <!--ul>li{这是第$个li}*8 -->
+    <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+    </ul>
+</body>
+
+</html>

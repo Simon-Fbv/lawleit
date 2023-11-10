@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪元素，通过class创建标签，装饰性的不重要的小图 
+        找父级，在这个父级里面创建子级标签*/
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        /* 文字是个行内元素没有宽高的设定所以需要转为块元素 */
+        .father::before {
+            content: "老鼠";
+            width: 100px;
+            height: 100px;
+            color: blue;
+            display: block;
+        }
+
+        /* 标准流：又称文档流，是浏览器在渲染显示网页内容时默认采用的一种排版规则
+常用标准流排版规则：
+块级元素：从上往下，垂直布局，独占一行 
+行内元素/行内块元素：从左往右，水平布局，空间不能自动折行*/
+        .father::after {
+            content: "大米";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        爱
+    </div>
+</body>
+
+</html>

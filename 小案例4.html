@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="jay">周杰伦</button>
+    <button id="xusong">许嵩</button>
+    <br>
+    <img src="./image/jay.jpg" alt="" title="周杰伦">
+    <script>
+        var jay = document.getElementById('jay');
+        var xusong = document.getElementById('xusong');
+        var img = document.querySelector('img');
+        jay.onclick = function () {
+            img.src = './image/jay.jpg';
+            img.title = "周杰伦";
+        }
+        xusong.onclick = function () {
+            img.src = './image/xusong.jpg';
+            img.title = "许嵩";
+        }
+    </script>
+</body>
+
+</html>

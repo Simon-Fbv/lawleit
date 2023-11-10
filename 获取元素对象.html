@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time">2023-11-9</div>
+    <div>
+        <ul>
+            <li>知否知否应是等你好久1</li>
+            <li>知否知否应是等你好久2</li>
+            <li>知否知否应是等你好久3</li>
+            <li>知否知否应是等你好久4</li>
+            <li>知否知否应是等你好久5</li>
+        </ul>
+    </div>
+    <script>
+        // getElementById返回一个元素对象***
+        var timer = document.getElementById('time');
+        console.log(timer);
+        console.log(typeof timer);
+        // 打印我们返回的元素对象，更好的查看里面的属性和方法
+        console.dir(timer);
+        /*------------------------------------------------------*/
+        // getElementsByTagName返回的是获取过来的元素对象的集合，以伪数组的形式存储的
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[2]);
+        // 要打印里面的元素对象我们可以采用遍历的方式
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        // element.getelementsByTagName('标签名')可以获取某个父元素内部所有指定标签名的子元素
+        // 注意：父元素必须是单个对象，获取的时候不包括父元素自己
+        /*--------------------------------------------------------*/
+        //HTML5++新增的获取方法
+        //documnet.getElementsByClassName根据类名获得某些元素集合
+        //document.getElementsByClassName('类名');
+        //documnet.querySelector('选择器')
+        /*---------------------------------------------------------*/
+        //获取特殊元素
+        //document.body
+        //document.documentElement    整个html标签元素对象
+    </script>
+</body>
+
+</html>

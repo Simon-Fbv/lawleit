@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>document</title>
+    <style>
+        div {
+            text-align: center;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<!-- 改变元素内容 -->
+
+<body>
+    <button>显示当前系统时间</button>
+    <div>来个时间</div>
+    <script>
+        // element.innerText从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉
+        //element.innerHTML起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行
+        var btn = document.querySelector('button');
+        var btt = document.querySelector('div');
+        btn.onclick = function () {
+            //btt.innerText = '2023-11-9';
+            btt.innerText = getDate();
+        }
+        function getDate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDay();
+            var dates = date.getDate();
+            var arr = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天'];
+            return '今天是：' + year + '年' + month + '月' + dates + '日' + arr[day];
+        }
+        //innerText和innerHTML的区别
+        //1.innerText 不识别html标签 非标准 去除空格和换行
+        //2.innerHTML 则相反是W3C标准 保留空格和换行
+        //这两个属性是可读写的 可以获取元素里面的内容
+    </script>
+</body>
+
+</html>
